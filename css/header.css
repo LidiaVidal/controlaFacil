@@ -1,0 +1,36 @@
+.app-header {
+    text-align: center;
+    margin: 15px;
+}
+
+.app-header > h1{
+    font-family: var(--title-font);
+    font-size: 20px;
+}
+
+.app-header > p {
+    font-family: var(--text-font);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media screen and (min-width:768px) {
+    .app-header > h1{
+        font-size: 22px;
+    }
+
+    .app-header > p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .app-header > h1{
+        font-size: 24px;
+    }
+
+    .app-header > p {
+        font-size: 22px;
+    }
+}
+
