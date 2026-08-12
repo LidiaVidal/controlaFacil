@@ -88,6 +88,10 @@
 
 @media screen and (min-width: 1024px) {
     .transaction-form-section {
-        grid-area: form; /* Posiciona na esquerda do layout desktop */
+        grid-area: form;
+    }
+
+    .form-group .date-input {
+        width: 105px;
     }
 }
