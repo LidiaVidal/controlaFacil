@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --background-color: #FFFCF9;
+    --text-color: #4B5563;
+    --inflow-color: #84CC16;
+    --outflow-color: #F97316;
+    --title-font: 'Quicksand';
+    --text-font: 'DM Sans';
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--text-font);
+    font-size: 16px;
+    color: var(--text-color);
+}
