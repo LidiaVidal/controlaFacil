@@ -21,3 +21,9 @@ body {
     font-size: 16px;
     color: var(--text-color);
 }
+
+.dashboard-main {
+    margin: auto;
+    width: 380px;
+    
+}
