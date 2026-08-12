@@ -1,0 +1,83 @@
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance-card .card-icon {
+    background-color: var(--balance-bg);
+    color: var(--balance-color);
+}
+
+.income-card .card-icon {
+    background-color: var(--inflow-bg);
+    color: var(--inflow-color);
+}
+
+.expense-card .card-icon {
+    background-color: var(--outflow-bg);
+    color: var(--outflow-color);
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3, .card-info .label {
+    font-size: 0.85rem;
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+.card-info .value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 2px 0;
+    font-family: var(--title-font);
+}
+
+.card-info .positive { color: var(--inflow-color); }
+.card-info .negative { color: var(--outflow-color); }
+
+/* --- RESPONSIVIDADE SUMMARY CARDS --- */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .summary-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card {
+        flex: 1 1 calc(50% - 15px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .summary-cards {
+        grid-area: cards; /* Posiciona no topo do layout desktop */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card {
+        flex: 1;
+    }
+}

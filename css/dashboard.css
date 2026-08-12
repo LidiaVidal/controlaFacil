@@ -1,0 +1,87 @@
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.transaction-history {
+    background-color: var(--card-bg-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.history-header h2 {
+    font-size: 1.2rem;
+    color: var(--title-color);
+    font-family: var(--title-font);
+}
+
+.btn-filter {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-family: var(--text-font);
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+#transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#transactions-table th {
+    color: var(--title-color);
+    font-weight: 700;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-family: var(--text-font);
+}
+
+#transactions-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #F3F4F6;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Pílulas de Tipo de Transação para usar no JS futuramente */
+.pill-entrada {
+    background-color: var(--inflow-bg);
+    color: var(--inflow-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.pill-despesa {
+    background-color: var(--outflow-bg);
+    color: var(--outflow-color);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* --- RESPONSIVIDADE DASHBOARD CONTENT --- */
+@media screen and (min-width: 1024px) {
+    .dashboard-content {
+        grid-area: content; /* Posiciona na área livre à direita no desktop */
+    }
+}
