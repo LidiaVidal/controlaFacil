@@ -5,7 +5,8 @@ const inputDescricao = document.querySelector('#description')
 const inputTipo = document.querySelector('#type')
 const btnAdicionar = document.querySelector('.btn-add')
 
-const transacoes = []
+const transacoes = JSON.parse(localStorage.getItem('transacoes')) || []
+
 
 btnAdicionar.addEventListener('click', adicionarTransacao)
 
@@ -24,5 +25,35 @@ btnAdicionar.addEventListener('click', adicionarTransacao)
     }
 
     transacoes.push(transacao)
+
+    localStorage.setItem('transacoes', JSON.stringify(transacoes))
+    mostraHistorico()
 }
 
+const tabelaDados = document.getElementById('transaction-list')
+
+mostraHistorico()
+
+function mostraHistorico() {
+    tabelaDados.innerHTML = ''
+    transacoes.forEach((dado, indice) => {
+        
+        //Cria a estrutura HTML para os dados da tabela
+        const linhaTabela = document.createElement('tr')
+        const colunaData = document.createElement('td')
+        const colunaDescricao = document.createElement('td')
+        const colunaTipo = document.createElement('td')
+        const colunaValor = document.createElement('td')
+
+        tabelaDados.append(linhaTabela)
+        linhaTabela.append(colunaData)
+        linhaTabela.append(colunaDescricao)
+        linhaTabela.append(colunaTipo)
+        linhaTabela.append(colunaValor)
+
+        colunaData.innerHTML = dado.data
+        colunaDescricao.innerHTML = dado.descricao
+        colunaTipo.innerHTML = dado.tipo
+        colunaValor.innerHTML = dado.valor
+    });
+}
